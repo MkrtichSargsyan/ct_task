@@ -1,0 +1,466 @@
+/*
+    ==============================================
+
+                ****** RESET ******
+
+    ==============================================
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0 !important;
+}
+
+p {
+  margin: 0 !important;
+}
+
+/*
+    ==============================================
+
+                ****** GLOBAL ******
+
+    ==============================================
+*/
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto !important;
+  font-family: sans-serif;
+  font-size: 14px;
+  width: 100%;
+  max-width: 1800px;
+  height: 4rem;
+}
+
+header,
+footer {
+  width: 100%;
+  max-width: 1800px;
+}
+
+h2.section_title {
+  opacity: 0.502;
+  font-size: 136px;
+  line-height: 136px;
+  color: rgba(65, 79, 107, 0.5);
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 80px;
+  }
+
+  span {
+    font-size: 32px;
+    color: #142444;
+    position: absolute;
+    left: 8rem;
+    top: 1.2rem;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 22px;
+      left: 5rem;
+      top: 0.2rem;
+    }
+  }
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  li {
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #fefeff;
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Lato';
+    border-bottom: 1px solid white;
+  }
+
+  li a{
+    color: #fefeff;
+  }
+}
+
+img.logo {
+  border: 1px solid #bcc3c6;
+  border-radius: 50%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 60%;
+
+  @media only screen and (max-width: 1000px) {
+    width: 90%;
+  }
+}
+
+a{
+  color: inherit;
+}
+
+/*
+    ==============================================
+
+                ****** HEADER ******
+
+    ==============================================
+*/
+
+header {
+  position: absolute;
+  width: 100%;
+}
+
+.header_container {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+    ==============================================
+
+            ****** Showcase section ******
+
+    ==============================================
+*/
+
+.showcase {
+  background-image: url('./images/showcaseBg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  @media only screen and (min-width: 1200px) {
+    background-size: cover;
+    height: 74vw;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    background-size: cover;
+    height: 85vw;
+  }
+
+  @media only screen and (max-width: 600px) {
+    background-size: cover;
+    height: 87vw;
+  }
+}
+
+/*
+    ==============================================
+
+            ****** Sticky nav ******
+
+    ==============================================
+*/
+
+.sticky_nav {
+  background-color: white;
+  padding: 1rem 0;
+  z-index: 10;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+  .sticky_nav_container {
+    display: flex;
+    justify-content: space-between;
+
+    .logo_container {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    .sticky_navigation {
+      li a {
+        color: #414f6b;
+        border-bottom: 1px solid #414f6b;
+      }
+    }
+  }
+}
+
+/*
+    ==============================================
+
+            ****** History section ******
+
+    ==============================================
+*/
+
+.history_section {
+  position: relative;
+  background-image: url('./images/historyBg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 20%;
+  height: 100vh;
+  padding: 2rem 0;
+
+  @media only screen and (max-width: 1200px) {
+    height: 80vh;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 50vh;
+  }
+}
+
+.history_container {
+  .section_subtitle {
+    width: 100%;
+    padding: 0 4rem;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: 300;
+    font-family: 'Lato';
+
+    @media only screen and (max-width: 768px) {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.carousel_container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(65, 79, 107, 0.7);
+
+  padding: 2rem 0 3rem;
+
+  .carousel {
+    img {
+      width: 180px;
+      height: 110px;
+    }
+  }
+
+  .carousel-indicators {
+    bottom: -3rem !important;
+  }
+}
+
+
+.slide-box {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .slide-box img {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .slide-box img {
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .slide-box img {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 0.5rem;
+}
+
+/*
+    ==============================================
+
+            ****** Climb section ******
+
+    ==============================================
+*/
+
+.climb_section {
+  .climb_header {
+    background-color: white;
+    padding: 1rem 0 1.5rem;
+
+    .climb_title_container {
+      display: flex;
+      align-items: center;
+
+      @media only screen and (max-width: 768px) {
+        // flex-direction: column;
+        display: unset;
+      }
+
+      .section_title {
+        span {
+          left: 9rem;
+
+          @media only screen and (max-width: 768px) {
+           left: 6rem;
+          }
+        }
+      }
+
+      .section_subtitle {
+        width: 100%;
+        padding: 0 4rem;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        font-weight: 300;
+        font-family: 'Lato';
+
+        @media only screen and (max-width: 768px) {
+          padding: 0 1rem;
+         }
+      }
+    }
+  }
+
+  .climb_tabs {
+    background-color: #414f6b;
+
+    ul {
+      gap: 0;
+
+      li {
+        font-size: 20px;
+        padding: 0.5rem 1rem;
+        color: #b0b4be;
+        font-weight: 700;
+        font-family: 'Oswald';
+        font-style: normal;
+        border: none;
+      }
+
+      .selected {
+        background-color: #b0b4be;
+        text-decoration: underline;
+        color: #414f6b;
+      }
+    }
+  }
+
+  .tab_content {
+    height: 50vh;
+    background-image: url('./images/mountain_img_2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 45%;
+    padding: 6rem 0;
+
+    .schedule {
+      opacity: 0.702;
+      width: 350px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 0.5rem 2rem;
+
+      @media only screen and (max-width: 768px) {
+        width: unset;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        font-size: 32px;
+        color: #142444;
+        font-weight: 700;
+        font-family: 'Oswald';
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        font-weight: 400;
+        font-family: 'Lato';
+      }
+    }
+  }
+}
+
+/*
+    ==============================================
+
+            ****** Footer ******
+
+    ==============================================
+*/
+
+footer {
+  background-color: #414f6b;
+  padding: 1rem 0;
+
+  .footer_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer_container .logo_container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 21px;
+    letter-spacing: 0px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #63769d;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .footer_container .footer_rights {
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #63769d;
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Lato';
+  }
+}
+
+// --------------
